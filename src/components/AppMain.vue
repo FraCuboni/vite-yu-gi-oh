@@ -1,9 +1,18 @@
 <script>
+    // importo il componente card
     import Card from './Card.vue';
+    // importo lo store
+    import { store } from '../store';
     export default{
         name : 'AppMain',
         components:{
             Card,
+        },
+
+        data(){
+            return{
+                store,
+            }
         },
     }
 
@@ -29,7 +38,7 @@
 
                 <div class="cards">
 
-                    <Card/>
+                    <Card v-for="(card, index) in store.cardList" :key="card.id" :CardInfo="Card"/>
 
                 </div>
             </div>
@@ -40,6 +49,7 @@
 </template>
 
 <style lang="scss" scoped>
+// unisco i file scss per le variabili, mixins e le impostazioni generali
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
@@ -78,7 +88,7 @@
                 min-height: 100px;
                 display: flex;
                 justify-content: space-between;
-
+                flex-wrap: wrap;
 
                 
             }

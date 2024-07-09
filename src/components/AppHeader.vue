@@ -14,6 +14,7 @@
 </template>
 
 <style lang="scss" scoped>
+// unisco i file scss per le variabili, mixins e le impostazioni generali
 @use '../styles/general.scss' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;

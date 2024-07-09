@@ -3,6 +3,9 @@
     export default{
         name : 'Card',
 
+        props : {
+        CardInfo : Object,
+    }
     }
 
 </script>
@@ -24,7 +27,7 @@
 .card{
     min-height: 100px;
     background-color: $primary_color;
-    width: calc(100% / 5 - 30px);
+    width: calc(100% / 5 - 20px);
 
     display: flex;
     flex-direction: column;
