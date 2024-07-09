@@ -7,6 +7,29 @@
 </script>
 
 <template>
+
+    <div class="container">
+
+        <div class="nested-container">
+
+            <div class="card-container">
+
+                <div class="title"></div>
+
+                <div class="cards">
+
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -14,8 +37,46 @@
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-.container-fluid{
-    min-height: 100px;
-    background-color: red;
+.container{
+    width: 100%;
+    padding: 5% 10%;
+    background-color: #d48f38;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .nested-container{
+        width: 100%;
+        padding: 5%;
+        background-color: white;
+
+        .card-container{
+            border: solid 1px black;
+
+            .title{
+                background-color: black;
+                color: white;
+                min-height: 100px;
+                margin-bottom: 30px;
+            }
+
+            .cards{
+                min-height: 100px;
+                display: flex;
+                justify-content: space-between;
+
+
+                .card{
+                    min-height: 200px;
+                    background-color: blue;
+                    width: calc(100% / 5 - 30px);
+                }
+            }
+        }
+
+    }
 }
+
 </style>
