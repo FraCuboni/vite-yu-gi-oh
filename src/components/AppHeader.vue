@@ -9,7 +9,7 @@
 <template>
     <div class="container">
         <div class="logo">logo</div>
-        <div>yu gi oh bla bla</div>
+        <h1>Yu Gi Oh API</h1>
     </div>
 </template>
 
@@ -20,7 +20,9 @@
 
 .container{
     min-height: 100px;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 </style>

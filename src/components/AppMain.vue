@@ -14,7 +14,15 @@
 
             <div class="card-container">
 
-                <div class="title"></div>
+                <div class="title">
+
+                    <h1>giorgio</h1>
+        
+                    <select name="type" id="">
+                        <option value="">Type</option>
+                    </select>
+                    
+                </div>
 
                 <div class="cards">
 
@@ -60,6 +68,11 @@
                 color: white;
                 min-height: 100px;
                 margin-bottom: 30px;
+                padding: 0 20px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
 
             .cards{
