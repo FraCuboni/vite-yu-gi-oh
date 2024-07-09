@@ -1,5 +1,6 @@
 <script>
-
+  import axios from 'axios';
+  import { store } from './store';
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue';
 
@@ -7,6 +8,27 @@
     components :{
       AppHeader,
       AppMain,
+    },
+
+    data(){
+      return {
+        store,
+      }
+    },
+    methods : {
+      GetCardInfo(){
+        axios.
+        get(store.apiURL)
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err =>{
+          console.log(err);
+        })
+      }
+    },
+    created(){
+      this.GetCardInfo();
     }
   }
 
@@ -14,7 +36,6 @@
 
 <template>
   <AppHeader/>
-  <AppNav/>
   <AppMain/>
 </template>
 

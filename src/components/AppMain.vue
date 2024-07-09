@@ -1,7 +1,10 @@
 <script>
-
+    import Card from './Card.vue';
     export default{
         name : 'AppMain',
+        components:{
+            Card,
+        },
     }
 
 </script>
@@ -26,11 +29,7 @@
 
                 <div class="cards">
 
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                    <Card/>
 
                 </div>
             </div>
@@ -48,7 +47,7 @@
 .container{
     width: 100%;
     padding: 5% 10%;
-    background-color: #d48f38;
+    background-color: $primary_color;
 
     display: flex;
     align-items: center;
@@ -81,11 +80,7 @@
                 justify-content: space-between;
 
 
-                .card{
-                    min-height: 200px;
-                    background-color: blue;
-                    width: calc(100% / 5 - 30px);
-                }
+                
             }
         }
 
