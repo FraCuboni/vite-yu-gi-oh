@@ -1,3 +1,8 @@
-.container-fluid {
+.container {
+    min-height: 100px;
+    display: flex;
+}
+
+[class*="col-"] {
     min-height: 100px;
 }

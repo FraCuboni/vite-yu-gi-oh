@@ -7,12 +7,9 @@
 </script>
 
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                
-            </div>
-        </div>
+    <div class="container">
+        <div class="logo">logo</div>
+        <div>yu gi oh bla bla</div>
     </div>
 </template>
 
@@ -21,9 +18,10 @@
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-.container-fluid{
+.container{
     min-height: 100px;
     background-color: red;
 }
+
 </style>
 
