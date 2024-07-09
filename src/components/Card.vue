@@ -12,9 +12,11 @@
 
 <template>
     <div class="card">
-        <div class="img-container">IMMAGINEEE</div>
-        <h2 class="card-name">MARIO</h2>
-        <h2 class="card-type">ALIEN</h2>
+        <div class="img-container">
+            <img :src="CardInfo.card_images[0].image_url" alt="">
+        </div>
+        <h2 class="card-name">{{ CardInfo.name }}</h2>
+        <h2 class="card-type">{{ CardInfo.archetype }}</h2>
     </div>
 </template>
 

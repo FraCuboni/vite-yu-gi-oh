@@ -38,7 +38,7 @@
 
                 <div class="cards">
 
-                    <Card v-for="(card, index) in store.cardList" :key="card.id" :CardInfo="Card"/>
+                    <Card v-for="(card, index) in store.cardList" :key="card.id" :CardInfo="card"/>
 
                 </div>
             </div>
