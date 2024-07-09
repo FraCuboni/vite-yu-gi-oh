@@ -30,6 +30,7 @@
     min-height: 100px;
     background-color: $primary_color;
     width: calc(100% / 5 - 20px);
+    margin-bottom: 30px;
 
     display: flex;
     flex-direction: column;
@@ -45,10 +46,7 @@
     .card-name{
         color: white;
     }
-
-    .card-type{
-
-    }
+    
 }
 
 </style>

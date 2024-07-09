@@ -28,7 +28,7 @@
 
                 <div class="title">
 
-                    <h1>giorgio</h1>
+                    <h1>Found {{ store.cardList.length }} Cards</h1>
         
                     <select name="type" id="">
                         <option value="">Type</option>
@@ -70,7 +70,6 @@
         background-color: white;
 
         .card-container{
-            border: solid 1px black;
 
             .title{
                 background-color: black;
@@ -90,7 +89,6 @@
                 justify-content: space-between;
                 flex-wrap: wrap;
 
-                
             }
         }
 
