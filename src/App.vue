@@ -4,12 +4,14 @@
   import { store } from './store';
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue';
+  import Filter from './components/Filter.vue';
 
   // definisco Appheader e Appmain
   export default{
     components :{
       AppHeader,
       AppMain,
+      Filter,
     },
 
     data(){
@@ -26,8 +28,23 @@
         .then(res => {
           console.log(res.data.data);
           store.cardList = res.data.data;
-          console.log('store' + store.cardList)
+          console.log('store cards ' + store.cardList)
         })
+        // se va storto logga in console l'errore
+        .catch(err =>{
+          console.log(err);
+        })
+      },
+
+      GetArchetype(){
+        axios.
+        // Se tutto va dritto ritorna l'array di oggetti data
+        get(store.archetypeAPI)
+        .then(res => {
+            console.log(res.data);
+            store.archetypeList= res.data;
+            console.log('store archetype ' + store.archetypeList)
+          })
         // se va storto logga in console l'errore
         .catch(err =>{
           console.log(err);
@@ -37,6 +54,7 @@
     created(){
       // attivo per estrarre i dati alla creazione della pagina
       this.GetCardInfo();
+      this.GetArchetype();
     }
   }
 
@@ -44,6 +62,7 @@
 
 <template>
   <AppHeader/>
+  <Filter/>
   <AppMain/>
 </template>
 

@@ -31,6 +31,8 @@
     background-color: $primary_color;
     width: calc(100% / 5 - 20px);
     margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
 
     display: flex;
     flex-direction: column;

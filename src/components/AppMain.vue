@@ -1,6 +1,9 @@
 <script>
     // importo il componente card
     import Card from './Card.vue';
+
+    
+
     // importo lo store
     import { store } from '../store';
     export default{
@@ -30,9 +33,6 @@
 
                     <h1>Found {{ store.cardList.length }} Cards</h1>
         
-                    <select name="type" id="">
-                        <option value="">Type</option>
-                    </select>
                     
                 </div>
 
