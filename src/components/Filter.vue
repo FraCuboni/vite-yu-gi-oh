@@ -1,18 +1,26 @@
 <script>
 
+    
+  import { store } from '../store';
+
     export default{
         name : 'Filter',
+
+        data(){
+            return {
+                store,
+            }
+    },
+
     }
 
 </script>
 
 <template><select
     @keyup.enter="$emit('filter')"
-     name="type" id="">
-        <option value="">Archetype</option>
-        <option value="Alien">Alien</option>
-        <option value="Toy">Toy</option>
-        <option value="Archfiend">Archfiend</option>
+    v-model="store.aFilter"
+    name="type" id="">
+        <option v-for="(archetype, index) in store.archetypeList" :key="index" value=""">{{ archetype.archetype_name}}</option>
     </select>
 </template>
 

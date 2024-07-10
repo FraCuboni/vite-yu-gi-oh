@@ -62,7 +62,7 @@
 
 <template>
   <AppHeader/>
-  <Filter/>
+  <Filter @filter="GetCardInfo" />
   <AppMain/>
 </template>
 
