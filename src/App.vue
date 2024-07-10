@@ -22,9 +22,17 @@
     // creo la funzione per estrarre i dati  dall'API usando axios
     methods : {
       GetCardInfo(){
+
+        let endPoint = store.apiURL;
+
+        // opzione ricerca
+        if(store.aFilter !== ''){
+          endPoint += `&archetype=${store.aFilter}`;
+        }
+
         axios.
         // Se tutto va dritto ritorna l'array di oggetti data
-        get(store.apiURL)
+        get(endPoint)
         .then(res => {
           console.log(res.data.data);
           store.cardList = res.data.data;

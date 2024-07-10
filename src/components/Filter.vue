@@ -17,10 +17,10 @@
 </script>
 
 <template><select
-    @keyup.enter="$emit('filter')"
+    @change="$emit('filter')"
     v-model="store.aFilter"
     name="type" id="">
-        <option v-for="(archetype, index) in store.archetypeList" :key="index" value=""">{{ archetype.archetype_name}}</option>
+        <option v-for="(archetype, index) in store.archetypeList" :key="index" :value="archetype.archetype_name">{{ archetype.archetype_name}}</option>
     </select>
 </template>
 

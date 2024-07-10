@@ -8,4 +8,5 @@ export const store = reactive({
     aFilter: '',
     archetypeList: [],
     archetypeAPI: "https://db.ygoprodeck.com/api/v7/archetypes.php",
+    apiArchetypeParameter: '&archetype',
 });
