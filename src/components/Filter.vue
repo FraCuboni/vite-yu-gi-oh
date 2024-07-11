@@ -20,6 +20,7 @@
     @change="$emit('filter')"
     v-model="store.aFilter"
     name="type" id="">
+        <option value="">All</option>
         <option v-for="(archetype, index) in store.archetypeList" :key="index" :value="archetype.archetype_name">{{ archetype.archetype_name}}</option>
     </select>
 </template>
